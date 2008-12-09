@@ -1,4 +1,6 @@
-;; A Qt4 system tray app.  Displays an icon in the system tray.
+;; A Qt4 system tray app to check mail servers for new mail,
+;; displaying an icon in the system tray.
+;;
 ;; When there are new messages, a number is drawn over the icon
 ;; and the icon's context menu is updated to display info about
 ;; the new messages.
@@ -7,6 +9,8 @@
 ;; same server.
 ;;
 ;; Requires Qt Jambi, Javamail, and clojure-contrib.
+;;
+;; NOTE: SUPPLY YOUR OWN MAIL ICON.  Transparent icons work.
 
 (ns bcc.mailtray
   (:import (com.trolltech.qt.gui QAction QFont QFont$Weight)
@@ -18,7 +22,7 @@
 (def *mailspecs* (ref #{}))
 (def *message-fetch-interval-ms* (* 60 1000))
 (def *message-updater* (agent nil))
-(def *icon-filename* "mail.png")
+(def *icon-filename* "mail.png") ;; ***** CUSTOMIZE ME *****
 
 ;; Mail-fetching fns
 (defn check-mail
