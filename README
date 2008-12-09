@@ -1,0 +1,9 @@
+Some random Clojure scripts.  Use at your own risk.  Don't blame me if your computer explodes.
+
+Requirements for mailtray.clj:
+- Qt Jambi (Qt for Java: http://trolltech.com/downloads/opensource/appdev)
+- Javamail (http://java.sun.com/products/javamail/)
+- clojure-contrib (http://github.com/kevinoneill/clojure-contrib/tree/master
+                   http://sourceforge.net/projects/clojure-contrib)
+
+See LICENSE file for license.
