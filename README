@@ -6,4 +6,34 @@ Requirements for mailtray.clj:
 - clojure-contrib (http://github.com/kevinoneill/clojure-contrib/tree/master
                    http://sourceforge.net/projects/clojure-contrib)
 
-See LICENSE file for license.
+* The included mail.png is from http://kde-look.org/content/show.php/Buuf+for+KDE?content=56726
+(Based on icons by Paul Davey aka Mattahan. All rights reserved.  Not for use commercially with his permission.)
+* See LICENSE file for all license info for other files.
+
+-------------------------------
+
+Example use (type at the REPL):
+
+(require 'qt4-mailtray.mailtray)
+(in-ns 'qt4-mailtray.mailtray)
+
+(load-mailspecs #{
+                    {:protocol "imaps"
+                     :host "imap.gmail.com"
+                     :user "username@gmail.com"
+                     :password "password"
+                     :folder-name "INBOX"}
+
+                    {:protocol "imap"
+                     :host "imap.somedomain.xyz"
+                     :user "someuser"
+                     :password "somepassword"
+                     :folder-name "INBOX.somefolder.subfolder"}
+
+                    {:protocol "pop3"
+                     :host "pop.otherdomain.xyz"
+                     :user "someuser"
+                     :password "somepassword"
+                     :folder-name "INBOX"}})
+
+(run)

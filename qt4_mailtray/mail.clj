@@ -1,5 +1,5 @@
 ;; Clojure wrapper for Javamail. (http://java.sun.com/products/javamail/)
-(ns bcc.mail
+(ns qt4-mailtray.mail
   (:import (java.util Properties)
            (javax.mail Session Store Folder Message Flags Flags$Flag FetchProfile FetchProfile$Item)
            (javax.mail.internet InternetAddress))

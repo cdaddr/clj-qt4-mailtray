@@ -1,5 +1,5 @@
 ;; Misc. utils
-(ns bcc.util)
+(ns qt4-mailtray.util)
 
 (defn find-first
   "Return the first item in coll for which pred is true."

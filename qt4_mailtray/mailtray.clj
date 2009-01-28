@@ -10,13 +10,14 @@
 ;;
 ;; Requires Qt Jambi, Javamail, and clojure-contrib.
 ;;
-;; NOTE: SUPPLY YOUR OWN MAIL ICON.  Transparent icons work.
+;; NOTE: mail.png is supplied.  Supply your own if you wish.  
+;; Transparent icons work.
 
-(ns bcc.mailtray
+(ns qt4-mailtray.mailtray
   (:import (com.trolltech.qt.gui QAction QFont QFont$Weight)
            (com.trolltech.qt.core QCoreApplication))
   (:use clojure.contrib.str-utils
-        (bcc qt4 mail util)))
+        (qt4-mailtray qt4 mail util)))
 
 (def *messages* (ref {}))
 (def *mailspecs* (ref #{}))

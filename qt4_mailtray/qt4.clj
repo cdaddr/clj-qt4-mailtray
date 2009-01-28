@@ -1,6 +1,6 @@
 ;; Clojure wrapper for Qt Jambi (Qt for Java: http://trolltech.com/downloads/opensource/appdev )
 ;; Plus a few icon and menu manipulation fns.
-(ns bcc.qt4
+(ns qt4-mailtray.qt4
   (:import (com.trolltech.qt.gui
             QApplication
             QMenu QAction QIcon
